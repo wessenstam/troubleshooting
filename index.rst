@@ -2,20 +2,23 @@
 
 .. toctree::
   :maxdepth: 2
-  :caption: Labs
-  :name: _labs
+  :caption: Basic Troubleshooting
+  :name: _bas_troub
   :hidden:
 
-  examplelab1/examplelab1
-  examplelab2/examplelab2
+  basic_linux/basic_linux
+  foundation/Foundation
+  cvm/cvm
+  ahv/ahv
+  poc/poc
+  implement/implement
 
 .. toctree::
   :maxdepth: 2
-  :caption: Optional Labs
-  :name: _optional_labs
+  :caption: Advanced Troubleshooting
+  :name: _adv_troub
   :hidden:
 
-  examplelab3/examplelab3
 
 .. toctree::
   :maxdepth: 2
@@ -32,46 +35,94 @@
 Getting Started
 ---------------
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit odio, ultrices sed elementum vitae, dictum eget turpis. Etiam ultrices orci quis tempus tempus. Nulla non nibh imperdiet, suscipit risus quis, eleifend nisl. Morbi at posuere nibh, quis bibendum dui. Morbi dictum sem a ipsum bibendum condimentum. Suspendisse id ante gravida, efficitur leo a, consequat enim. Suspendisse tempor lorem vel purus scelerisque, vel facilisis lorem consequat. Pellentesque augue orci, iaculis vel mollis sit amet, scelerisque a tellus. Aliquam commodo in lectus feugiat porta.
+This workshop has a presentation that holds all the slides that are discussed before you will runthe workshop. The presentation can be found :download:`here <ppt/presentation.pptx>`
 
-What's New
-++++++++++
+The purpose of this training is to get to a knowledge that common issues can be solved by any help from support or other SEs. This is **not** to get the knowledge of our **SREs** that we have, **nor** to be a starting point of getting **NSS** certified.
 
-- Workshop updated for the following software versions:
-  - AOS 5.6
-  - AFS 3.0
-- Added :ref:`example_lab_3`
+What will we discuss?
++++++++++++++++++++++
 
-Access Instructions
-+++++++++++++++++++
+During the workshop and the presentation we will discuss the following troubleshooting topics:
 
-The Nutanix Hosted POC environment can be accessed a number of different ways:
+- Basic Linux commands to are helpfull
+- Foundation
+- Acropolis (CVM)
+- AHV
+- PoC
+- Implementation
 
-Citrix XenDesktop
-.................
+Basic Linux commands
+....................
 
-https://citrixready.nutanix.com - *Accessible via the Citrix Receiver client or HTML5*
+As our Nutanix CVM is running within a CentOS O/S, we can use the default Linux bash commands to look, search and manipulate files. IN this module you will learn the most common and handy commands to use.
 
-**Nutanix Employees** - Use your NUTANIXDC credentials
+- grep
+- ls
+- cat
+- tr
+- cut
+- sar
+- ifconfig
+- less
+- more
+- find
+- mv
+- rm
+- ps
+- top
+- tail
+- df
+- ssh
 
-**Non-Employees** - **Username:** POCxxx-User01 (up to POCxxx-User20), **Password:** *<Provided by Instructor>*
+Foundation
+..........
 
-Employee Pulse Secure VPN
-..........................
+This process is the the most important first step to get a cluster installed. Unfortunately, allthough a lot will be automatically solved, there are still issues seen in the field when performing the Foundation process. Think about:
 
-https://sslvpn.nutanix.com - Use your CORP credentials
+- A
+- B
+- C
+- Network issues
 
-Non-Employee Pulse Secure VPN
-..............................
+Acropolis (CVM)
+...............
 
-https://lab-vpn.nutanix.com - **Username:** POCxxx-User01 (up to POCxxx-User20), **Password:** *<Provided by Instructor>*
+Our magic sauce comes from the CVM. As mentioned earlier this is a VM that is based on CentOS, but runs a lot of daemons that have their own purpose, use and specific commandlines tools available. This module will discuss the most common ones like:
 
-Under **Client Application Sessions**, click **Start** to the right of **Pulse Secure** to download the client.
+- Genesis
+- Stargate
+- Zookeeper
+- Cassandra
+- PRISM
+- Medusa
 
-Install and open **Pulse Secure**.
+AHV
+...
 
-Add a connection:
+Our free of charge HyperVisor is becoming more and more best of breed. More features are becoming available in the CVM that can be used by the HyperVisor. To understand how to solve issues, this module will provide the first line off defense for troubleshooting the NUtanix AHV. The module will discuss the following topics:
 
-- **Type** - Policy Secure (UAC) or Connection Server
-- **Name** - HPOC VPN
-- **Server URL** - lab-vpn.nutanix.com
+- VM management
+- Virtual Network management
+- C
+- D
+
+PoC
+...
+
+For PoC purposes you will have to combine a few things of the other modules to get to pinpointing the issue and then solve it, or to find your way in the process of getting a PoC setup and running successful. This module will discuss:
+
+- Pre-Requirements for the PoC
+- SFDC process to start a PoC
+- Transport process
+- Dark Site installations
+- E
+
+Implementation
+..............
+
+If you need to run an implementation, you may need to combine the former modules. Just as with a PoC. There are some small steps that need to done before handing over the clusert to the customer. This module, allthough not really a troubleshooting module, will discuss the tasks to handover the cluster to the customer in a very smooth manner.
+
+- SFDC process
+- Support portal process
+- License the cluster
+- Dark site installations
