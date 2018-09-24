@@ -61,7 +61,6 @@ As our Nutanix CVM is running within a CentOS O/S, we can use the default Linux 
 - cat
 - tr
 - cut
-- sar
 - ifconfig
 - less
 - more
